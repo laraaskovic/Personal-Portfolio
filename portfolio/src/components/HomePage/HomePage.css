@@ -1,0 +1,21 @@
+.home {
+    height: 100vh;
+    /*background: #121212 url([./back.png]) no-repeat center center/cover;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .home-content p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  

@@ -1,0 +1,24 @@
+/* Add this at the top of your global.css file */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #05030d;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: #882445;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}

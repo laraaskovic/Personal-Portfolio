@@ -1,0 +1,12 @@
+.bento-box {
+    padding: 20px;
+    border: 1px solid #000000;
+    margin: 10px;
+    transition: background-color 0.5s ease;
+}
+.bento-box:hover {
+    background-color: #8a2750; /* Change to your preferred color */
+}
+.bento-box h3, .bento-box p, .bento-box a {
+    color: rgb(247, 187, 234);
+}
