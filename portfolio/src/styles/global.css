@@ -4,7 +4,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #05030d;
+    background-color: #03040d;
     color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
 }
@@ -14,7 +14,7 @@ h1, h2, h3 {
 }
 
 a {
-    color: #882445;
+    color: #000000;
 }
 
 
@@ -22,3 +22,39 @@ a {
 html {
     scroll-behavior: smooth;
 }
+
+
+
+.bento-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    background-color: #121212; /* Dark theme background */
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      background-color: #1A1A1A;
+    }
+    to {
+      background-color: #333;
+    }
+  }
+  
+  .bento-box:hover {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @media (max-width: 768px) {
+    .bento-container {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+  
+    .bento-box {
+      margin-bottom: 20px;
+    }
+  }
+  
