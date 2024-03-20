@@ -20,7 +20,7 @@
     bottom: -50%;
     background: radial-gradient(circle, rgba(8, 8, 8, 0.488) 20%, transparent 70%);
     z-index: 0;
-    transition: opacity 1.3s ease;
+    transition: opacity 0.3s ease;
     opacity: 0; /* Hide initially */
     border-radius: 50%;
   }
