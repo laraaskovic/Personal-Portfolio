@@ -1,4 +1,45 @@
-/* Add this at the top of your global.css file */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #03040d;
+ /* background-image: url('path/to/your/background-image.jpg'); /* Add a subtle, dark themed background image */
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #FFFFFF; /* Adjust for better visibility */
+  transition: color 0.3s ease; /* Smooth transition for link hover effects */
+}
+
+a:hover {
+  color: #eefb5f; /* Bright highlight color on hover */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bento-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  background-color: transparent; /* Ensure container background is transparent */
+}
+
+
+
+/*
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
 
 body {
@@ -30,7 +71,7 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     padding: 40px;
-    background-color: #121212; /* Dark theme background */
+    background-color: #121212; 
   }
   
   
@@ -57,4 +98,4 @@ html {
       margin-bottom: 20px;
     }
   }
-  
+  */

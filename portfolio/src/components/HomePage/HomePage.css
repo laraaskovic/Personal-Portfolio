@@ -1,21 +1,67 @@
 .home {
-    height: 100vh;
-    /*background: #121212 url([./back.png]) no-repeat center center/cover;*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #f0e9ff;
-    text-align: left;
-    padding: 0 20px;
-  }
-  
-  .home-content h1 {
-    font-size: 4.5rem;
-    margin-bottom: .5rem;
-  }
-  
-  .home-content p {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-  
+  height: 100vh;
+  backgroundImage: "url(/back.png)";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0e9ff;
+  text-align: left; /* Center align the text for a more symmetrical look */
+  padding: 0 20px;
+  position: relative; /* Set position for pseudo-elements */
+  overflow: hidden; /* Ensure any child elements outside this container are hidden */
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: radial-gradient(circle, rgb(22, 61, 99) 20%, transparent 70%);
+  transform: scale(0);
+  transition: transform 3.8s ease-out;
+}
+
+.home:hover::before {
+  transform: scale(4);
+}
+
+.home-content {
+  position: relative; /* Ensure the text appears above the pseudo-element */
+  max-width: 600px; /* Limit the width of the content for better readability */
+  z-index: 1; /* Make sure content is above the background effects */
+}
+
+.home-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700; /* Make the title bolder */
+  letter-spacing: -2px; /* Tighten letter spacing for a sleek look */
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5); /* Add subtle text shadow for depth */
+}
+
+.home-content p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  opacity: 0.9; /* Slightly tone down the text for better focus on the title */
+  margin-bottom: 2rem; /* Add more space below for any call-to-action buttons */
+}
+
+/* Add a call-to-action button */
+.home-content a {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff62ab, #ff884d);
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.home-content a:hover {
+  background: linear-gradient(45deg, #ff884d, #ff62ab);
+  transform: translateY(-5px);
+}
