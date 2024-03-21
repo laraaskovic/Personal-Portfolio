@@ -11,6 +11,7 @@
     justify-content: space-between;
   }
   
+
   .bento-box::before {
     content: '';
     position: absolute;
@@ -26,7 +27,7 @@
   }
   
   .bento-box:hover::before {
-    opacity: 1; /* Show light effect on hover */
+    opacity: 1; 
   }
   
   .bento-box:hover {
@@ -36,7 +37,7 @@
   
   .bento-image {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
     transition: opacity 0.3s ease;
   }
@@ -70,3 +71,7 @@
     background: linear-gradient(45deg, #93184d, #2a5b9f);
   }
   
+
+  .heading {
+    align-items: center;
+  }
