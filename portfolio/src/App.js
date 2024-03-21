@@ -4,15 +4,19 @@ import './styles/global.css';
 import BentoBox from './components/BentoBox/BentoBox';
 import HomePage from './components/HomePage/HomePage';
 
-import NavigationBar from './components/NavigationBar/NavigationBar';
+import NavigationBar from './Navbar';
 
 
 function App() {
     return (
         <div>
-            <div><HomePage /></div>
+            <NavigationBar/>
+            
+            <div id="home" className="section">
+                <HomePage />
+            </div>
 
-            <div className="bento-container">
+            <div id="create" className="bento-container">
               <h1>Projects</h1>
 
               <BentoBox title="Icon" description="Can:  System.out.println('Hello World');" link="#" image={`${process.env.PUBLIC_URL}/lol.avif`} size="large" />
