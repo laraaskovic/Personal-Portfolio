@@ -6,6 +6,7 @@ import HomePage from './components/HomePage/HomePage';
 
 import NavigationBar from './Navbar';
 import Cursor from './components/Cursor/Cursor'; // Import the Cursor component
+import Contact from './components/Contact/Contact'; 
 
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
               <BentoBox title="Library System" description="Java system with GUI Properies. Focused on UI/UX and OOP." link="#" image={`${process.env.PUBLIC_URL}/r.avif`} size="medium" />
               <BentoBox title="Chat Application" description="Something else." link="#" image={`${process.env.PUBLIC_URL}/ll.jpg`} size="small" />
               {/* Add more BentoBoxes as needed */}
+             </div>
+
+             <div id="contact" classname="contact">
+                <Contact/>
              </div>
         </div> 
     );

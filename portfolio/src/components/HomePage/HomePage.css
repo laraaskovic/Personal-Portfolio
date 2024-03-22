@@ -1,4 +1,3 @@
-/* HomePage.css */
 .home {
   height: 100vh;
   display: flex;
@@ -6,14 +5,16 @@
   justify-content: center;
   color: #eeeaf7;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  text-align: left; /* Adjust text alignment */
+  text-align: left; 
   padding: 0 20px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(120deg, #000000 0%, #060314 100%);
+
+  background: linear-gradient(120deg, #000000 0%, #331f8b 100%);
   animation: GradientBackground 10s ease infinite;
   background-size: 400% 400%;
 }
+
 
 /* Dynamic background animation */
 @keyframes GradientBackground {
@@ -41,10 +42,10 @@
 }
 
 .home-content h1 {
-  font-size: 4.5rem; /* Adjusted for aesthetic */
+  font-size: 5rem; /* Adjusted for aesthetic */
   margin: 0.5rem 0;
   font-weight: 550; /* Increased weight */
-  letter-spacing: 1px;
+  letter-spacing: -3px;
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
 }
 

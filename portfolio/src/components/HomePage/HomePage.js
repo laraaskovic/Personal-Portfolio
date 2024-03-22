@@ -19,8 +19,8 @@ const HomePage = () => {
         }}>
             <div className="home-content">
                 <h1>LARA ASKOVIC</h1>
-                <p>Innovative developer based in Toronto, crafting unique digital experiences.</p>
-                <a href="#create">View My Work</a>
+                <p>SOFTWARE DESIGNER, FRONT END & APP DEVELOPER.</p>
+                <a href="#create">VIEW MY WORK</a>
             </div>
         </div>
     );
@@ -28,20 +28,3 @@ const HomePage = () => {
 
 export default HomePage;
 
-
-
-/*import React from 'react';
-import './HomePage.css';
-
-const HomePage = () => (
-  <div className="home" id="home">
-    <div className="home-content">
-      <h1>Lara Askovic</h1>
-      <p>Innovative developer based in Toronto, crafting unique digital experiences.</p>
-      <a href="#create">View My Work</a>
-    </div>
-  </div>
-);
-
-export default HomePage;
-*/
