@@ -35,7 +35,7 @@
 }
 
 .nav a:hover, .nav li.active a {
-  color: #ab3159; /* Highlight color on hover and for active link */
+  color: #f4a7c0; /* Highlight color on hover and for active link */
 }
 
 .nav li.active {

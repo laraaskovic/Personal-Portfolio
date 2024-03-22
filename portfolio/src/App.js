@@ -5,11 +5,14 @@ import BentoBox from './components/BentoBox/BentoBox';
 import HomePage from './components/HomePage/HomePage';
 
 import NavigationBar from './Navbar';
+import Cursor from './components/Cursor/Cursor'; // Import the Cursor component
 
 
 function App() {
     return (
         <div>
+            <Cursor />
+
             <NavigationBar/>
             
             <div id="home" className="section">

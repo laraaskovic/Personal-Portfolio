@@ -24,6 +24,7 @@ function Navbar() {
       <ul>
         <CustomLink href="#home" activeHash={activeHash}>Home</CustomLink>
         <CustomLink href="#create" activeHash={activeHash}>Projects</CustomLink>
+        <CustomLink href="#contact" activeHash={activeHash}>Contact</CustomLink>
         
       </ul>
     </nav>
