@@ -1,13 +1,90 @@
+/* HomePage.css */
 .home {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #f0e9ff;
-  text-align: left; /* Center align the text for a more symmetrical look */
+  text-align: left; /* Adjust text alignment */
   padding: 0 20px;
-  position: relative; /* Set position for pseudo-elements */
-  overflow: hidden; /* Ensure any child elements outside this container are hidden */
+  position: relative;
+  overflow: hidden;
+  background: circle-gradient(120deg, #000000 0%, #05020c 100%);
+  animation: GradientBackground 5s ease infinite;
+  background-size: 400% 400%;
+}
+
+/* Dynamic background animation */
+@keyframes GradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home-content {
+  position: relative;
+  max-width: 800px; /* Increased width for better layout */
+  z-index: 1;
+  animation: FadeInUp 1.5s ease-out;
+}
+
+@keyframes FadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.home-content h1 {
+  font-size: 4rem; /* Adjusted for aesthetic */
+  margin: 0.5rem 0;
+  font-weight: 800; /* Increased weight */
+  letter-spacing: -1px;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.home-content p {
+  font-size: 1.5rem; /* Larger text for emphasis */
+  opacity: 0.95;
+  margin-bottom: 2.5rem;
+  color: #918db3; /* Light purple for contrast */
+}
+
+/* Interactive CTA Button */
+.home-content a {
+  display: inline-block;
+  background: linear-gradient(45deg, #eea9c9, #9ac0eb);
+  color: #000000;
+  padding: 12px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-content a:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+/*.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0e9ff;
+  text-align: left; 
+  padding: 0 20px;
+  position: relative; 
+  overflow: hidden; 
 }
 
 .home::before {
@@ -27,27 +104,26 @@
 }
 
 .home-content {
-  position: relative; /* Ensure the text appears above the pseudo-element */
-  max-width: 600px; /* Limit the width of the content for better readability */
-  z-index: 1; /* Make sure content is above the background effects */
+  position: relative; 
+  max-width: 600px; 
+  z-index: 1; 
 }
 
 .home-content h1 {
   font-size: 4.5rem;
   margin-bottom: 0.5rem;
-  font-weight: 700; /* Make the title bolder */
-  letter-spacing: -2px; /* Tighten letter spacing for a sleek look */
-  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5); /* Add subtle text shadow for depth */
+  font-weight: 700; 
+  letter-spacing: -2px; 
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5); 
 }
 
 .home-content p {
   font-size: 1.25rem;
   line-height: 1.5;
-  opacity: 0.9; /* Slightly tone down the text for better focus on the title */
-  margin-bottom: 2rem; /* Add more space below for any call-to-action buttons */
+  opacity: 0.9; 
+  margin-bottom: 2rem; 
 }
 
-/* Add a call-to-action button */
 .home-content a {
   display: inline-block;
   background: linear-gradient(45deg, #ff62ab, #ff884d);
@@ -64,3 +140,4 @@
   background: linear-gradient(45deg, #ff884d, #ff62ab);
   transform: translateY(-5px);
 }
+*/

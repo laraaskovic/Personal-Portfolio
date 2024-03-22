@@ -1,5 +1,22 @@
+// HomePage.js
 import React from 'react';
-import './HomePage.css'; // Don't forget to create a corresponding CSS file
+import './HomePage.css';
+
+const HomePage = () => (
+  <div className="home" id="home">
+    <div className="home-content">
+      <h1>Lara Askovic</h1>
+      <p>Innovative developer based in Toronto, crafting unique digital experiences.</p>
+      <a href="#projects">View My Work</a>
+    </div>
+  </div>
+);
+
+export default HomePage;
+
+
+/*import React from 'react';
+import './HomePage.css';
 
 const HomePage = () => (
   <div className="home" id="home">
@@ -11,3 +28,4 @@ const HomePage = () => (
 );
 
 export default HomePage;
+*/

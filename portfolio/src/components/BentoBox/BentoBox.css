@@ -59,8 +59,8 @@
   .content a {
     align-self: center;
     margin-top: 10px;
-    background: linear-gradient(45deg, #2a5b9f, #93184d);
-    color: #fff;
+    background: linear-gradient(45deg, #9ec3f7, #fa9bc4);
+    color: #000000;
     padding: 8px 15px;
     text-decoration: none;
     border-radius: 10px;
@@ -68,7 +68,7 @@
   }
   
   .content a:hover {
-    background: linear-gradient(45deg, #93184d, #2a5b9f);
+    background: linear-gradient(45deg, #fa9bc4, #78a0d8);
   }
   
 
