@@ -10,9 +10,11 @@ const Contact = () => {
     return (
         <div className="contact-container" id="contact">
             <div className="contact-background">
-                <div className="parallax-background"></div>
+                <div className="parallax-background" style={{backgroundImage: `url('/lol.avif')`}}></div>
             </div>
             <div className="contact-content">
+                 
+
                 <h2>Let's Connect</h2>
                 <p>Have a question or want to work together?</p>
                 <form className="contact-form">
