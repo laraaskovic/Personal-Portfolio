@@ -24,14 +24,12 @@
   padding: 0 20px;
   position: relative;
   overflow: hidden;
-
   background: linear-gradient(120deg, #000000 0%, #331f8b 100%);
   animation: GradientBackground 10s ease infinite;
   background-size: 400% 400%;
 }
 */
 
-/* Dynamic background animation */
 @keyframes GradientBackground {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -43,6 +41,7 @@
   max-width: 800px; /* Increased width for better layout */
   z-index: 1;
   animation: FadeInUp 1.5s ease-out;
+
 }
 
 @keyframes FadeInUp {
@@ -73,16 +72,16 @@
   opacity: 0.95;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin-bottom: 2.5rem;
-  color: #918db3; 
+  color: #e0ddf8; 
 }
 
 .home-content p:hover {
-  color: #938ebd; 
+  color: #c8c4ea; 
 }
 
 .home-content a {
   display: inline-block;
-  background: linear-gradient(45deg, #f8bfda, #c8e2ff);
+  background: linear-gradient(45deg, #3763a0, #ccedff);
   color: #000000;
   padding: 12px 35px;
   border-radius: 25px;
@@ -97,7 +96,7 @@
 .home-content a:hover {
   transform: translateY(-8px);
   border-radius: 15px;
-  background: linear-gradient(45deg, #c8e2ff, #f8bfda );
+  background: linear-gradient(45deg, #ccedff, #3763a0 );
   box-shadow: 0 10px 20px rgb(6, 28, 48);
 }
 
