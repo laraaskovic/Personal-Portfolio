@@ -1,4 +1,24 @@
 .home {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  color: #eeeaf7;
+  text-align: left;
+  max-width: 800px;
+  /* Other styles remain unchanged */
+}
+/*.home {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -10,10 +30,11 @@
   position: relative;
   overflow: hidden;
   background-repeat: no-repeat;
-  transition: transform 0.5s ease; /* Smooth rotation */
-  transform-origin: center; /* Ensure rotation around the center */
+  transition: transform 0.5s ease; 
+  transform-origin: center;
 }
-/*.home {
+
+.home {
   height: 100vh;
   display: flex;
   align-items: center;
