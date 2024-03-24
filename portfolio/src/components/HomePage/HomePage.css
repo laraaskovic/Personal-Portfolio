@@ -4,6 +4,21 @@
   align-items: center;
   justify-content: center;
   color: #eeeaf7;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+  padding: 0 20px;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease; /* Smooth rotation */
+  transform-origin: center; /* Ensure rotation around the center */
+}
+/*.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eeeaf7;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   text-align: left; 
   padding: 0 20px;
@@ -14,7 +29,7 @@
   animation: GradientBackground 10s ease infinite;
   background-size: 400% 400%;
 }
-
+*/
 
 /* Dynamic background animation */
 @keyframes GradientBackground {
