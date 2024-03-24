@@ -1,0 +1,60 @@
+:root {
+    --primary-color: #8c106d;
+    --background-color: #000000;
+    --text-color: #ffffff;
+    width: 96%;
+  }
+  
+  .experiences-container {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .experience-item {
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-left: 3px solid var(--primary-color);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .experience-item h3 {
+    color: var(--primary-color);
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .experience-item p {
+    margin: 5px 10px;
+    color: var(--text-color);
+  }
+  
+  .date {
+    font-style: italic;
+    font-size: 12px;
+}
+  
+  .experience-details {
+    padding: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  .experience-item.active .experience-details {
+    max-height: 100px; /* Adjust based on your content */
+  }
+  
+  .experience-item.active h3 {
+    background-color: var(--primary-color);
+    color: rgb(255, 173, 225);
+  }
+  
+  .experience-item:not(.active):hover h3 {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  

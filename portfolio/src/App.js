@@ -8,6 +8,8 @@ import NavigationBar from './Navbar';
 import Cursor from './components/Cursor/Cursor'; // Import the Cursor component
 import Contact from './components/Contact/Contact'; 
 
+import Exp from './components/Exp/Exp';
+
 
 function App() {
     return (
@@ -28,6 +30,12 @@ function App() {
               <BentoBox title="Chat Application" description="Something else." link="#" image={`${process.env.PUBLIC_URL}/ll.jpg`} size="small" />
               {/* Add more BentoBoxes as needed */}
              </div>
+
+
+            <div id = "exp" className="exp">
+                <h1>Experience</h1>
+                <Exp/>
+            </div>
 
              <div id="contact" classname="contact">
                 <Contact/>
