@@ -23,19 +23,19 @@ function App() {
             </div>
 
             <div id="create" className="bento-container">
-              <h1>Projects</h1>
 
-              <BentoBox title="Icon" description="Can:  System.out.println('Hello World');" link="#" image={`${process.env.PUBLIC_URL}/lol.avif`} size="large" />
-              <BentoBox title="Library System" description="Java system with GUI Properies. Focused on UI/UX and OOP." link="#" image={`${process.env.PUBLIC_URL}/r.avif`} size="medium" />
-              <BentoBox title="Chat Application" description="Something else." link="#" image={`${process.env.PUBLIC_URL}/ll.jpg`} size="small" />
-              <BentoBox title="Icon" description="Can:  System.out.println('Hello World');" link="#" image={`${process.env.PUBLIC_URL}/lol.avif`} size="large" />
-              <BentoBox title="Chat Application" description="Something else." link="#" image={`${process.env.PUBLIC_URL}/ll.jpg`} size="small" />
+              <BentoBox title="Icon" description="Can: ello World');" link="#" image={`${process.env.PUBLIC_URL}/lol.avif`} size="large" />
+              <BentoBox title="Library System" description="Focused on UI/UX and OOP." link="#" image={`${process.env.PUBLIC_URL}/r.avif`} size="medium" />
+              <BentoBox title="Chat Application" description="Something else." link="#" image={`${process.env.PUBLIC_URL}/ll.jpg`} size="medium" />
+              <BentoBox title="Chat Application" description="Something else." link="#" image={`${process.env.PUBLIC_URL}/ll.jpg`} size="medium" />
+              <BentoBox title="Icon" description="Can:  System.oHello World');" link="#" image={`${process.env.PUBLIC_URL}/lol.avif`} size="large" />
+              <BentoBox title="Library System" description="Focused on UI/UX and OOP." link="#" image={`${process.env.PUBLIC_URL}/r.avif`} size="medium" />
+
             {/* Add more BentoBoxes as needed */}
              </div>
 
 
             <div id = "exp" className="exp">
-                <h1>Experience</h1>
                 <Exp/>
             </div>
 

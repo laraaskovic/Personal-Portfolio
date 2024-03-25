@@ -1,11 +1,114 @@
+.bento-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the space between boxes */
+  justify-content: center; /* Centering items horizontally */
+  align-items: flex-start; /* Align items from the start of the container */
+}
+
 .bento-box {
-    background-color: #000000; /* Darker shade */
+  background-color: #000000;
+  color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgb(7, 26, 43);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 200px; /* Default basis, but it will adjust based on class */
+}
+
+.bento-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(8, 8, 8, 0.488) 20%, transparent 70%);
+  z-index: 0;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  border-radius: 15px; /* Match the border-radius of the box */
+}
+
+.bento-box:hover::before {
+  opacity: 1;
+}
+
+.bento-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(137, 6, 86, 0.759);
+}
+
+.bento-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.bento-box:hover .bento-image {
+  opacity: 0.9;
+}
+
+.content {
+  padding: 20px;
+  z-index: 1; /* Ensure content is above the ::before pseudo-element */
+  position: relative;
+}
+
+.content h3, .content p, .content a {
+  margin: 10px 0; /* Ensure consistent margin for all content elements */
+}
+
+.content a {
+  align-self: center;
+  background: linear-gradient(45deg, #9ec3f7, #fa9bc4);
+  color: #000000;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.content a:hover {
+  background: linear-gradient(45deg, #fa9bc4, #78a0d8);
+}
+
+/* Size classes */
+.small { flex: 1 1 150px; }
+.medium { flex: 1 1 200px; }
+.large { flex: 1 1 250px; }
+
+@media (max-width: 768px) {
+  .bento-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bento-box {
+    flex-basis: 100%; /* Full width on smaller screens */
+  }
+}
+
+
+
+
+
+
+
+
+/*.bento-box {
+    background-color: #000000; 
     color: #fff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgb(11, 39, 64);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* Needed for pseudo-elements */
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,6 +131,16 @@
   .bento-box:hover::before {
     opacity: 1; 
   }
+
+  .small { flex: 1 1 150px; } 
+.medium { flex: 1 1 200px; } 
+.large { flex: 1 1 250px; } 
+
+.bento-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
   
   .bento-box:hover {
     transform: translateY(-10px);
@@ -74,3 +187,4 @@
   .heading {
     align-items: center;
   }
+*/
