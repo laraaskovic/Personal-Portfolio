@@ -1,12 +1,46 @@
 /* Cursor.css */
+.cursor, .cursor-trail {
+  position: fixed;
+  border-radius: 50%;
+  background-color: #e983a9; /* Primary cursor color */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
 .cursor {
-    position: fixed;
-    width: 15px; /* Size of the cursor */
-    height: 15px; /* Size of the cursor */
-    border-radius: 50%; /* Make it round */
-    background-color: #dc749a; /* Cursor color */
-    transform: translate(-50%, -50%);
-    pointer-events: none; /* Ignore the cursor in mouse events */
-    z-index: 9999; /* Ensure it's above other content */
+  width: 10px; /* Size of the primary cursor */
+  height: 10px; /* Size of the primary cursor */
+}
+
+.cursor-trail {
+  width: 30px; /* Size of the secondary cursor */
+  height: 30px; /* Size of the secondary cursor */
+  background-color: #461321; /* Secondary cursor color */
+  opacity: 0.5; /* Make the trail slightly transparent */
+}
+
+.cursor::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #981d4a; /* Same color as the cursor for the trail effect */
+  border-radius: 50%;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  animation: cursorTrailEffect 0.5s infinite alternate;
+}
+
+@keyframes cursorTrailEffect {
+  from {
+    transform: scale(1);
+    opacity: 0.5;
   }
-  
+  to {
+    transform: scale(4); /* Increase the size for the trail effect */
+    opacity: 0;
+  }
+}
