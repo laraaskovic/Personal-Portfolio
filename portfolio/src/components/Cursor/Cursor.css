@@ -2,7 +2,7 @@
 .cursor, .cursor-trail {
   position: fixed;
   border-radius: 50%;
-  background-color: #e983a9; /* Primary cursor color */
+  background-color: #c3d6fb; /* Primary cursor color */
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
@@ -16,7 +16,7 @@
 .cursor-trail {
   width: 30px; /* Size of the secondary cursor */
   height: 30px; /* Size of the secondary cursor */
-  background-color: #461321; /* Secondary cursor color */
+  background-color: #132746; /* Secondary cursor color */
   opacity: 0.5; /* Make the trail slightly transparent */
 }
 
@@ -25,13 +25,13 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 1px solid #981d4a; /* Same color as the cursor for the trail effect */
+  border: 1px solid #26678d; /* Same color as the cursor for the trail effect */
   border-radius: 50%;
   opacity: 0.5;
   top: 0;
   left: 0;
   pointer-events: none;
-  animation: cursorTrailEffect 0.5s infinite alternate;
+  animation: cursorTrailEffect 1s infinite alternate;
 }
 
 @keyframes cursorTrailEffect {
