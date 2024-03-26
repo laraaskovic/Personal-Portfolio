@@ -7,6 +7,7 @@ import HomePage from './components/HomePage/HomePage';
 import NavigationBar from './Navbar';
 import Cursor from './components/Cursor/Cursor'; // Import the Cursor component
 import Contact from './components/Contact/Contact'; 
+import Skills3D from './Name3D'; 
 
 import Exp from './components/Exp/Exp';
 
@@ -33,6 +34,10 @@ function App() {
 
              </div>
 
+
+             <div>
+                <Skills3D />
+            </div>
 
             <div id = "exp" className="exp">
                 <hi> -</hi>

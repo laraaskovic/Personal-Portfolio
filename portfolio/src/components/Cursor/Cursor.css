@@ -4,7 +4,7 @@
     width: 15px; /* Size of the cursor */
     height: 15px; /* Size of the cursor */
     border-radius: 50%; /* Make it round */
-    background-color: #f2a1c1; /* Cursor color */
+    background-color: #dc749a; /* Cursor color */
     transform: translate(-50%, -50%);
     pointer-events: none; /* Ignore the cursor in mouse events */
     z-index: 9999; /* Ensure it's above other content */
