@@ -1,60 +1,118 @@
 :root {
-    --primary-color: #8c106d;
-    --background-color: #000000;
-    --text-color: #ffffff;
-    width: 96%;
-  }
-  
-  .experiences-container {
-    background-color: var(--background-color);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .experience-item {
-    cursor: pointer;
-    margin-bottom: 15px;
-    border-left: 3px solid var(--primary-color);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .experience-item h3 {
-    color: var(--primary-color);
-    margin: 0;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .experience-item p {
-    margin: 5px 10px;
-    color: var(--text-color);
-  }
-  
-  .date {
-    font-style: italic;
-    font-size: 12px;
+  --primary-color: #87abdb; /* Vibrant neon pink */
+  --secondary-color: #ff77bb; /* Deep, rich purple */
+  --background-color: #000000; /* Deep, dark background for high contrast */
+  --text-color: #ffdbe8; /* Soft, bright white for readability */
+  --neon-shadow-primary: 0 0 20px rgba(41, 127, 184, 0.8); /* Stronger neon glow for primary color */
+  --neon-shadow-secondary: 0 0 20px rgba(25, 64, 115, 0.8); /* Neon glow for secondary color */
+  --transition-speed: 0.5s; /* Unified speed for transitions */
 }
+
+
+
+.experiences-header {
+  text-align: left;
+  margin-bottom: 1px;
+  padding-left: 65px; /* Aligns with the experiences-container */
+}
+
+.experiences-header h1 {
+  font-size: 2.5rem;
   
-  .experience-details {
-    padding: 10px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+  color: #abcee8;
+  text-shadow: var(--neon-shadow-primary);
+}
+
+
+
+.experiences-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: var(--background-color);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.experience-item {
+  cursor: pointer;
+  margin-bottom: 45px;
+  border-left: 5px solid var(--primary-color);
+  background: linear-gradient(145deg, rgba(22, 13, 58, 0.195), rgba(41, 21, 95, 0.1));
+  transition: transform var(--transition-speed) ease-out, box-shadow var(--transition-speed) ease-in-out;
+  box-shadow: var(--neon-shadow-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-item:hover {
+  transform: scale(1.03);
+  box-shadow: var(--neon-shadow-primary), var(--neon-shadow-secondary);
+}
+
+.experience-item h3, .experience-item p {
+  margin: 10px 0;
+  transition: color var(--transition-speed) ease;
+}
+
+.experience-item h3 {
+  padding: 20px 15px;
+  font-size: 1.25rem;
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.experience-item p, .date {
+  padding: 0 15px;
+  color: var(--text-color);
+}
+
+.date {
+  font-style: italic;
+  color: var(--secondary-color);
+}
+
+.experience-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-speed) ease-in-out;
+  padding: 0 15px;
+}
+
+.experience-item.active .experience-details {
+  max-height: 1000px; /* Generous max-height for smooth transitions */
+  padding: 15px;
+}
+
+.experience-item.active h3 {
+  color: var(--secondary-color);
+  text-shadow: var(--neon-shadow-secondary);
+}
+
+.experience-item:not(.active):hover h3 {
+  color: var(--primary-color);
+  text-shadow: var(--neon-shadow-primary);
+}
+
+/* Subtle glow effect on hover */
+.experience-item:hover::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, transparent, var(--background-color), transparent);
+  z-index: 0;
+  animation: rotateGlow 10s linear infinite;
+}
+
+@keyframes rotateGlow {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .experience-item.active .experience-details {
-    max-height: 100px; /* Adjust based on your content */
+  to {
+    transform: rotate(360deg);
   }
-  
-  .experience-item.active h3 {
-    background-color: var(--primary-color);
-    color: rgb(255, 173, 225);
-  }
-  
-  .experience-item:not(.active):hover h3 {
-    background-color: var(--primary-color);
-    color: white;
-  }
-  
+}

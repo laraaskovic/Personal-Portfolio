@@ -26,16 +26,16 @@ function App() {
 
               <BentoBox title="Icon" description="Can: ello World');" link="#" image={`${process.env.PUBLIC_URL}/lol.avif`} size="large" />
               <BentoBox title="Library System" description="Focused on UI/UX and OOP." link="#" image={`${process.env.PUBLIC_URL}/pr.jpg`} size="medium" />
-              <BentoBox title="Chat Application" description="Something else." link="#" image={`${process.env.PUBLIC_URL}/ko.avif`} size="medium" />
+              <BentoBox title="Chat Application" description="Something else." link="#" image={`${process.env.PUBLIC_URL}/ko.avif`} size="large" />
               <BentoBox title="Chat Application" description="Something else." link="#" image={`${process.env.PUBLIC_URL}/ik.avif`} size="medium" />
               <BentoBox title="Icon" description="Can:  System.oHello World');" link="#" image={`${process.env.PUBLIC_URL}/roll.avif`} size="large" />
               <BentoBox title="Library System" description="Focused on UI/UX and OOP." link="#" image={`${process.env.PUBLIC_URL}/oll.avif`} size="medium" />
 
-            {/* Add more BentoBoxes as needed */}
              </div>
 
 
             <div id = "exp" className="exp">
+                <hi> -</hi>
                 <Exp/>
             </div>
 
