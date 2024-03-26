@@ -1,84 +1,81 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 export const Name3D = () => {
   const mountRef = useRef(null);
-  const [selectedSkill, setSelectedSkill] = useState(null);
 
   useEffect(() => {
-    // Basic scene setup
-    const width = mountRef.current.clientWidth;
-    const height = mountRef.current.clientHeight;
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(width, height);
-    mountRef.current.appendChild(renderer.domElement);
-
-    // Add orbit controls for better scene interaction
-    const controls = new OrbitControls(camera, renderer.domElement);
-
-    // Create skills data
-    const skills = [
-      { color: 0xff0000, position: { x: -2, y: 0, z: 0 }, name: 'JavaScript' },
-      { color: 0x00ff00, position: { x: 0, y: 0, z: 0 }, name: 'React' },
-      { color: 0x0000ff, position: { x: 2, y: 0, z: 0 }, name: 'Three.js' },
-    ];
-
-    // Raycaster for mouse interaction
-    const raycaster = new THREE.Raycaster();
-    const mouse = new THREE.Vector2();
-
-    function onMouseMove(event) {
-      mouse.x = (event.clientX / width) * 2 - 1;
-      mouse.y = -(event.clientY / height) * 2 + 1;
-    }
-    window.addEventListener('mousemove', onMouseMove, false);
-
-    function onClick(event) {
-      raycaster.setFromCamera(mouse, camera);
-      const intersects = raycaster.intersectObjects(scene.children);
-
-      if (intersects.length > 0) {
-        const skill = skills.find(s => s.name === intersects[0].object.name);
-        setSelectedSkill(skill ? skill.name : null);
-      }
-    }
-    window.addEventListener('click', onClick, false);
-
-    // Add objects for each skill
-    skills.forEach(skill => {
-      const geometry = new THREE.BoxGeometry(1, 1, 1);
-      const material = new THREE.MeshBasicMaterial({ color: skill.color });
-      const cube = new THREE.Mesh(geometry, material);
-      cube.position.set(skill.position.x, skill.position.y, skill.position.z);
-      cube.name = skill.name;
-      scene.add(cube);
-    });
-
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 5;
 
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    mountRef.current.appendChild(renderer.domElement);
+
+    // OrbitControls for camera interaction
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.minDistance = 2;
+    controls.maxDistance = 10;
+    controls.enablePan = false;
+    controls.enableZoom = false;
+
+
+    const colors = {
+      metallicPink: new THREE.Color("#ff66cc"),
+      turquoiseBlue: new THREE.Color("#33cccc"),
+    };
+
+    // Dynamic lighting
+    const pointLight1 = new THREE.PointLight(colors.metallicPink, 2, 10);
+    pointLight1.position.set(5, 5, 5);
+    scene.add(pointLight1);
+
+    const pointLight2 = new THREE.PointLight(colors.turquoiseBlue, 2, 10);
+    pointLight2.position.set(-5, -5, -5);
+    scene.add(pointLight2);
+
+    // Geometry and material
+    const geometry = new THREE.TorusGeometry(1.7, 0.7, 16, 100);
+    const material = new THREE.MeshStandardMaterial({ 
+      color: 0xffffff, 
+      roughness: 0.5, 
+      metalness: 0.7
+    });
+    const torus = new THREE.Mesh(geometry, material);
+    scene.add(torus);
+
+    // Animation loop
     const animate = function () {
       requestAnimationFrame(animate);
-      controls.update(); // Only required if controls.enableDamping = true, or if controls.autoRotate = true
+
+      // Rotation removed to control via OrbitControls & interaction
+      // Update lighting to create dynamic effects
+      pointLight1.position.set(
+        5 * Math.sin(Date.now() * 0.001),
+        5 * Math.cos(Date.now() * 0.001),
+        5 * Math.sin(Date.now() * 0.001)
+      );
+      pointLight2.position.set(
+        5 * Math.sin(Date.now() * 0.002),
+        5 * Math.cos(Date.now() * 0.002),
+        -5 * Math.cos(Date.now() * 0.002)
+      );
+
+      controls.update();
       renderer.render(scene, camera);
     };
 
     animate();
 
+    // Cleanup
     return () => {
-      window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('click', onClick);
       mountRef.current.removeChild(renderer.domElement);
     };
   }, []);
 
-  return (
-    <div ref={mountRef} style={{ width: '100%', height: '100vh' }}>
-      {selectedSkill && <div style={{ position: 'absolute', top: '20px', left: '20px', color: 'white' }}>Selected Skill: {selectedSkill}</div>}
-    </div>
-  );
+  return <div ref={mountRef} style={{ width: '100%', height: '100vh' }} />;
 };
 
 export default Name3D;
