@@ -53,9 +53,9 @@ export const Name3D = () => {
       // Rotation removed to control via OrbitControls & interaction
       // Update lighting to create dynamic effects
       pointLight1.position.set(
-        5 * Math.sin(Date.now() * 0.001),
-        5 * Math.cos(Date.now() * 0.001),
-        5 * Math.sin(Date.now() * 0.001)
+        5 * Math.sin(Date.now() * 0.002),
+        5 * Math.cos(Date.now() * 0.002),
+        5 * Math.sin(Date.now() * 0.002)
       );
       pointLight2.position.set(
         5 * Math.sin(Date.now() * 0.002),
