@@ -60,18 +60,22 @@
   position: relative;
 }
 
+
 .content h3, .content p, .content a {
-  margin: 10px 0; /* Ensure consistent margin for all content elements */
+  margin: 10px 1%; /* Ensure consistent margin for all content elements */
+  padding-bottom: 9px;
 }
 
 .content a {
   align-self: center;
   background: linear-gradient(45deg, #9ec3f7, #fa9bc4);
   color: #000000;
-  padding: 8px 15px;
+  padding: 5px 10px;
   text-decoration: none;
   border-radius: 10px;
   transition: background 0.3s ease;
+  padding-top: 4px;
+
 }
 
 .content a:hover {

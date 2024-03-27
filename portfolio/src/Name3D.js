@@ -27,7 +27,7 @@ export const Name3D = () => {
       turquoiseBlue: new THREE.Color("#33cccc"),
     };
 
-    // Dynamic lighting
+    // lighting
     const pointLight1 = new THREE.PointLight(colors.metallicPink, 2, 10);
     pointLight1.position.set(5, 5, 5);
     scene.add(pointLight1);
@@ -37,7 +37,7 @@ export const Name3D = () => {
     scene.add(pointLight2);
 
     // Geometry and material
-    const geometry = new THREE.TorusGeometry(1.7, 0.7, 16, 100);
+    const geometry = new THREE.TorusGeometry(1.7, 0.6, 16, 100);
     const material = new THREE.MeshStandardMaterial({ 
       color: 0xffffff, 
       roughness: 0.5, 
@@ -50,17 +50,15 @@ export const Name3D = () => {
     const animate = function () {
       requestAnimationFrame(animate);
 
-      // Rotation removed to control via OrbitControls & interaction
-      // Update lighting to create dynamic effects
       pointLight1.position.set(
         5 * Math.sin(Date.now() * 0.002),
         5 * Math.cos(Date.now() * 0.002),
         5 * Math.sin(Date.now() * 0.002)
       );
       pointLight2.position.set(
-        5 * Math.sin(Date.now() * 0.002),
-        5 * Math.cos(Date.now() * 0.002),
-        -5 * Math.cos(Date.now() * 0.002)
+        5 * Math.sin(Date.now() * 0.001),
+        5 * Math.cos(Date.now() * 0.001),
+        -5 * Math.cos(Date.now() * 0.001)
       );
 
       controls.update();
