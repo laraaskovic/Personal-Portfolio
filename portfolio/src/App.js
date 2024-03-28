@@ -8,6 +8,9 @@ import NavigationBar from './Navbar';
 import Cursor from './components/Cursor/Cursor'; // Import the Cursor component
 import Contact from './components/Contact/Contact'; 
 import Skills3D from './Name3D'; 
+import LaraAskovic3D from './DynamicSpikyShape3D'; 
+
+
 
 import Exp from './components/Exp/Exp';
 
@@ -37,6 +40,9 @@ function App() {
 
              <div>
                 <Skills3D />
+            </div>
+
+            <div><LaraAskovic3D/>
             </div>
 
             <div id = "exp" className="exp">
