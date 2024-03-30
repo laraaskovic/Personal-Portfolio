@@ -40,7 +40,7 @@ export const Name3D = () => {
     const geometry = new THREE.TorusGeometry(1.7, 0.6, 16, 100);
     const material = new THREE.MeshStandardMaterial({ 
       color: 0xffffff, 
-      roughness: 0.5, 
+      roughness: 0.6, 
       metalness: 0.7
     });
     const torus = new THREE.Mesh(geometry, material);
@@ -58,7 +58,7 @@ export const Name3D = () => {
       pointLight2.position.set(
         5 * Math.sin(Date.now() * 0.001),
         5 * Math.cos(Date.now() * 0.001),
-        -5 * Math.cos(Date.now() * 0.001)
+        -5 * Math.cos(Date.now() * 0.002)
       );
 
       controls.update();
@@ -73,7 +73,7 @@ export const Name3D = () => {
     };
   }, []);
 
-  return <div ref={mountRef} style={{ width: '100%', height: '100vh' }} />;
+  return <div ref={mountRef} style={{ width: '100%', height: '100vh' } } id = "skills"/>;
 };
 
 export default Name3D;
