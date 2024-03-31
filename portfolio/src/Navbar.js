@@ -21,7 +21,6 @@ function Navbar() {
         <CustomLink href="#create" activeHash={activeHash}>Projects</CustomLink>
         <CustomLink href="#exp" activeHash={activeHash}>Experience</CustomLink>
         <CustomLink href="#skills" activeHash={activeHash}>Skills</CustomLink>
-        <CustomLink href="#three" activeHash={activeHash}>Three</CustomLink>
         <CustomLink href="#contact" activeHash={activeHash}>Contact</CustomLink>
         
       </ul>
