@@ -39,7 +39,7 @@ const LaraAskovic3D = () => {
         curveSegments: 17,
         bevelEnabled: true,
         bevelThickness: 0.7,
-        bevelSize: 0.1,
+        bevelSize: 0.4,
         bevelSegments: 5
       });
 

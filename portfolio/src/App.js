@@ -10,6 +10,7 @@ import Contact from './components/Contact/Contact';
 import Skills3D from './Name3D'; 
 import LaraAskovic3D from './DynamicSpikyShape3D'; 
 import Lol from './LaraAskovic3D'; 
+import Three from './three'; 
 
 
 
@@ -41,11 +42,10 @@ function App() {
 
              <div>
                 <Skills3D />
-                
+                <Lol/>
             </div>
 
-            <div><Lol/>
-            </div>
+           
 
             <div id = "exp" className="exp">
                 <hi> -</hi>
