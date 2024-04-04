@@ -16,6 +16,7 @@ export const Exp = () => {
         <h1>Past Experiences</h1>
       </header>
       <div className="experiences-container">
+
         {experiences.map((exp) => (
           <div key={exp.id} className={`experience-item ${activeId === exp.id ? 'active' : ''}`} onClick={() => setActiveId(exp.id)}>
             <h3>{exp.title} @ {exp.company}</h3>

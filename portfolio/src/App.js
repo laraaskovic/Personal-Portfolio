@@ -42,7 +42,7 @@ function App() {
 
              <div>
                 <Skills3D />
-                <Lol/>
+                <Three/>
             </div>
 
            
