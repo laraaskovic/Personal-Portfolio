@@ -14,7 +14,6 @@ export const Name3D = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     mountRef.current.appendChild(renderer.domElement);
 
-    // OrbitControls for camera interaction
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.minDistance = 2;
     controls.maxDistance = 10;
@@ -36,7 +35,6 @@ export const Name3D = () => {
     pointLight2.position.set(-5, -5, -5);
     scene.add(pointLight2);
 
-    // Geometry and material
     const geometry = new THREE.TorusGeometry(1.7, 0.6, 16, 100);
     const material = new THREE.MeshStandardMaterial({ 
       color: 0xffffff, 
@@ -46,7 +44,7 @@ export const Name3D = () => {
     const torus = new THREE.Mesh(geometry, material);
     scene.add(torus);
 
-    // Animation loop
+    // Animation
     const animate = function () {
       requestAnimationFrame(animate);
 
